@@ -1,0 +1,9 @@
+import smtplib
+def sendEmail(to, content):
+    server = smtplib.SMTP('smtp.gmail.com', 587)
+    server.ehlo()
+    server.starttls()
+    server.login('kkmrg1@gmail.com', 'mrgphoto1')
+    server.sendmail('kkmrg1@gmail.com', to, content)
+    server.close()
+sendEmail("krishnamanivannan2002@gmail.com","I Feel Thursty")

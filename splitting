@@ -1,0 +1,8 @@
+f = open("C:/Users/krish/Documents/Plant AI bot continuous data.csv", "r")
+lines = f.readlines()
+f2 = open("output.csv", "w")
+for i in range(0, len(lines), 6):
+
+    print((lines[i].split(',')[1].replace('\n', '')))
+    f2.write(str(lines[i].split(',')[1].replace('\n', ''))+","+str(lines[i+1]).split(',')[1].replace('\n', '')+","+str(lines[i+2]).split(',')[1].replace('\n', '') +
+             ","+str(lines[i+3]).split(',')[1].replace('\n', '')+","+str(lines[i+4]).split(',')[1].replace('\n', '')+","+str(lines[i+5]).split(',')[1].replace('\n', '')+'\n')
